@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Checkout page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+
+            <div class="page-title">Checkout</div>
+
+            <div class="cart">
+                <div class="cart-items-detail">
+
+                    <div class="cart-item cart-item1">
+                        <div class="item1-img cart-img">
+                            <img src="photo1.png" alt="Vintage backbag">
+                        </div>
+                        <div class="item1-right cart-right">
+                            <div class="item-name">Vintage backbag</div>
+                            <div class="item-price">$54.99 <span>$94.99</span></div>
+                            <div class="number-input">
+                                <div class="item-button">
+                                    <button onclick="decrementFirst()">-</button>
+                                    <input type="number" id="item1-quantity" value="1" min="1">
+                                    <button onclick="incrementFirst()">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="cart-item cart-item2">
+                        <div class="item1-img cart-img">
+                            <img src="photo2.png" alt="Levi shoes">
+                        </div>
+                        <div class="item2-right cart-right">
+                            <div class="item-name">Levi Shoes</div>
+                            <div class="item-price">$74.99 <span>$124.99</span></div>
+                            <div class="number-input">
+                                <div class="item-button">
+                                    <button onclick="decrementSecond()">-</button>
+                                    <input type="number" id="item2-quantity" value="1" min="1">
+                                    <button onclick="incrementSecond()">+</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+
+                </div> 
+
+                <div class="cart-items-total">
+                    <div class="total shipping">
+                        <div class="total-name">Shipping</div>
+                        <div class="total-price">$19</div>
+                    </div>
+                    <div class="total tot">
+                        <div class="total-name">Total</div>
+                        <div class="total-price" id="total-all">$148.99</div>
+                    </div>
+                </div> 
+            </div> 
+
+            <div class="form">
+                <form action="" method="POST">
+
+                    <div class="contact-form">
+                        <div class="form-section-title">Contact information</div>
+                        <label for="email">E-mail</label>
+                        <div class="input-box">
+                            <span class="material-icons">email</span>
+                            <input type="email" name="email" placeholder="Enter your email..." required>
+                        </div>
+                        <label for="phone">Phone</label>
+                        <div class="input-box">
+                            <span class="material-icons">call</span>
+                            <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}"
+                                placeholder="Enter your phone..." required>
+                        </div>
+                    </div> 
+
+                    <div class="shipping-form">
+                        <div class="form-section-title">Shipping address</div>
+                        <label for="name">Full name</label>
+                        <div class="input-box">
+                            <span class="material-icons">account_circle</span>
+                            <input type="text" id="name" name="name" placeholder="Rodney Cotton" required>
+                        </div>
+                        <label for="address">Address</label>
+                        <div class="input-box">
+                            <span class="material-icons">home</span>
+                            <input type="text" id="address" name="address" placeholder="Your address..." required>
+                        </div>
+                        <label for="city">City</label>
+                        <div class="input-box">
+                            <span class="material-icons">apartment</span>
+                            <input type="text" id="city" name="city" placeholder="Your city..." required>
+                        </div>
+
+                        <div class="flex-input-box">
+                            <div class="country-box">
+                                <label for="country">Your country</label>
+                                <div class="input-box">
+                                    <span class="material-icons">apartment</span>
+                                    <select id="country" name="country">
+                                        <option value="" disabled selected>Your country...</option>
+                                        <option value="italy">US</option>
+                                        <option value="jamaica">India</option>
+                                        <option value="japan">Japan</option>
+                                        <option value="jersey">UK</option>
+                                        <option value="jordan">Australia</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="postal-code-box">
+                                <label for="postal-code">Postal-code</label>
+                                <div class="input-box">
+                                    <span class="material-icons">markunread_mailbox</span>
+                                    <input type="number" name="postal-code" placeholder="Your postal code..." required>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> 
+
+                    <div class="save-info-box">
+                        <input type="checkbox" name="save-info" id="save-info">
+                        <label for="save-info">Save this information for next time</label>
+                    </div>
+
+                    <div class="submit-button">
+                        <a href="#">
+                            <input type="submit" value="Continue">
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="footer">
+                created by <a href="#">Punit</a>
+            </div>
+        </div> 
+
+
+
+    </div> 
+</body>
+
+</html>
